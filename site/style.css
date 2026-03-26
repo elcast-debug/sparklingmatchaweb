@@ -644,11 +644,16 @@ ul {
         z-index: 1002;
     }
 
+    .hero-text {
+        display: none;
+    }
+
     .hero-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center the CTA button since text is gone */
         padding: 0 1.5rem;
         gap: 2rem;
+        width: 100%;
     }
 
     .hero-text h1 {
