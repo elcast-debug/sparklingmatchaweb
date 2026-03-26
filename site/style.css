@@ -37,6 +37,8 @@ body {
     color: var(--color-text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -347,7 +349,8 @@ ul {
     transform: translateY(0);
 }
 
-.product-link, .discover-btn {
+.product-link,
+.discover-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -362,7 +365,8 @@ ul {
     transition: color var(--transition-fast);
 }
 
-.product-link:hover, .discover-btn:hover {
+.product-link:hover,
+.discover-btn:hover {
     color: var(--color-accent);
 }
 
@@ -604,7 +608,8 @@ ul {
 
     /* Navbar adjustments */
     .hero {
-        padding-bottom: 2rem; /* Move button down on mobile */
+        padding-bottom: 2rem;
+        /* Move button down on mobile */
     }
 
     .nav-links {
@@ -654,7 +659,8 @@ ul {
 
     .hero-content {
         flex-direction: column;
-        align-items: center; /* Center the CTA button since text is gone */
+        align-items: center;
+        /* Center the CTA button since text is gone */
         padding: 0 1.5rem;
         gap: 2rem;
         width: 100%;
