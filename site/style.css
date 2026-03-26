@@ -347,17 +347,78 @@ ul {
     transform: translateY(0);
 }
 
-.product-link {
+.product-link, .discover-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
     color: var(--color-text-light);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 4px;
+    padding: 0;
+    transition: color var(--transition-fast);
 }
 
-.product-link:hover {
+.product-link:hover, .discover-btn:hover {
     color: var(--color-accent);
+}
+
+/* Overlay Styles */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 52, 39, 0.9);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--color-text-light);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-medium), visibility var(--transition-medium);
+}
+
+.product-card.overlay-active .product-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.overlay-content {
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform var(--transition-medium);
+}
+
+.product-card.overlay-active .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.overlay-content p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.product-card.overlay-active .product-info {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* Background text styling for the cards, hidden behind image if image is full */

@@ -38,4 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // Product Overlays
+    const discoverBtns = document.querySelectorAll('.discover-btn');
+    const backBtns = document.querySelectorAll('.back-btn');
+
+    discoverBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const card = e.target.closest('.product-card');
+            if (card) {
+                card.classList.add('overlay-active');
+            }
+        });
+    });
+
+    backBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const card = e.target.closest('.product-card');
+            if (card) {
+                card.classList.remove('overlay-active');
+            }
+        });
+    });
 });
