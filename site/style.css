@@ -603,6 +603,10 @@ ul {
 @media (max-width: 768px) {
 
     /* Navbar adjustments */
+    .hero {
+        padding-bottom: 2rem; /* Move button down on mobile */
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
