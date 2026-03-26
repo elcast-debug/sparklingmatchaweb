@@ -203,9 +203,9 @@ ul {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
-    /* Takes up most of the viewport */
-    min-height: 600px;
+    height: 100vh;
+    /* Takes up entire viewport */
+    min-height: 500px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
