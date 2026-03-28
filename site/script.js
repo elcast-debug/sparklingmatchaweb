@@ -1,3 +1,13 @@
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+            preloader.remove();
+        }, 500); // match the CSS transition duration
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Sticky Navbar
     const navbar = document.getElementById('navbar');
