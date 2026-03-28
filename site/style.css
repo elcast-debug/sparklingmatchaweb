@@ -415,9 +415,9 @@ ul {
     background-color: rgba(31, 52, 39, 0.9);
     z-index: 20;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     color: var(--color-text-light);
     opacity: 0;
     visibility: hidden;
@@ -432,6 +432,10 @@ ul {
 }
 
 .overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     text-align: center;
     transform: translateY(20px);
     transition: transform var(--transition-medium);
@@ -449,9 +453,14 @@ ul {
 
 .overlay-content p {
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
     font-weight: 300;
+}
+
+.overlay-content p:last-of-type {
+    margin-top: auto;
+    margin-bottom: 2rem;
 }
 
 .product-card.overlay-active .product-info {
