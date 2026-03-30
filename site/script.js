@@ -64,9 +64,66 @@ document.addEventListener('DOMContentLoaded', () => {
     backBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const card = e.target.closest('.product-card');
-            if (card) {
-                card.classList.remove('overlay-active');
+            if (card) {card.classList.remove('overlay-active');}
+        });
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
+        });
+    });
+
+    // Instant Reaction for "Add to Cart" and "Store Finder" (INP Optimization)
+    const storeBtn = document.getElementById('find-store-btn');
+    if (storeBtn) {
+        storeBtn.addEventListener('click', () => {
+            const input = document.getElementById('zipcode-input');
+            const results = document.getElementById('store-list');
+            
+            // Immediate UI feedback
+            storeBtn.innerText = "SEARCHING...";
+            
+            // Simulate geo-lookup (Keep it fast < 200ms for UI shift)
+            setTimeout(() => {
+                storeBtn.innerText = "FIND NEAR ME";
+                if (input.value) {
+                    results.style.opacity = "0.5";
+                    setTimeout(() => { 
+                        results.style.opacity = "1";
+                        // Scroll to results
+                        results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                }
+            }, 150);
+        });
+    }
+
+    const cartBtns = document.querySelectorAll('.btn-full');
+    cartBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Immediate feedback
+            const originalText = btn.innerText;
+            btn.innerText = "ADDING...";
+            btn.style.backgroundColor = "var(--color-bg-dark)";
+            btn.style.color = "white";
+            
+            setTimeout(() => {
+                btn.innerText = "ADDED TO CART";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = "";
+                    btn.style.color = "";
+                }, 1500);
+            }, 300);
         });
     });
 });

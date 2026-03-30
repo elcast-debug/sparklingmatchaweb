@@ -740,3 +740,333 @@ ul {
         gap: 3rem;
     }
 }
+
+/* New Sections Styling */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+/* UGC Grid */
+.ugc {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--color-bg-darker);
+    color: var(--color-text-light);
+}
+
+.ugc .section-title {
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.ugc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.ugc-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    background-color: #000;
+}
+
+.ugc-item img, 
+.ugc-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast), transform var(--transition-medium);
+}
+
+.ugc-item:hover img,
+.ugc-item:hover video {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.social-tag {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-accent);
+    background: linear-gradient(45deg, #15251c, #1f3427);
+}
+
+/* Store Locator */
+.store-locator {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--color-bg-light);
+}
+
+.locator-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.store-finder {
+    display: flex;
+    gap: 0;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.store-finder input {
+    padding: 1rem 1.5rem;
+    border: 1px solid #e2e4dc;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+    max-width: 400px;
+    font-family: var(--font-body);
+    outline: none;
+}
+
+.store-finder .btn {
+    border-radius: 0 4px 4px 0;
+}
+
+.store-results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.store-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.store-card:hover {
+    border-color: var(--color-accent);
+}
+
+.store-card h5 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.store-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.store-link {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+}
+
+/* Footer Transparency */
+.footer-transparency {
+    max-width: 300px;
+}
+
+.footer-transparency p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.transparency-link {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Education Hub & Comparison Table */
+.edu-hero {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.edu-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 2rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.comparison-table th, 
+.comparison-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comparison-table th {
+    background-color: var(--color-bg-dark);
+    color: white;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.highlight-col {
+    background-color: rgba(208, 163, 90, 0.05);
+    font-weight: 600;
+}
+
+.comparison-table .check {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.comparison-table .cross {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Article Styling */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.article-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform var(--transition-medium);
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-img {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.article-content {
+    padding: 1.5rem;
+}
+
+.article-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-bg-dark);
+}
+
+.article-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Batch Results Sidebar/Dashboard */
+.lab-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.batch-box {
+    background: var(--color-bg-darker);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-label {
+    opacity: 0.6;
+    font-size: 0.85rem;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .ugc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .store-results {
+        grid-template-columns: 1fr;
+    }
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+    .lab-grid {
+        grid-template-columns: 1fr;
+    }
+}
